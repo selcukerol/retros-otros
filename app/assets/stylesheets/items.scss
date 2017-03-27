@@ -1,0 +1,90 @@
+// Place all the styles related to the items controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.item {
+  display: inline-block;
+  margin: 10px;
+  margin-left: 50px;
+  margin-top: 10px;
+  padding: 40px;
+  border: 3px solid #000;
+  border-radius: 10px;
+  box-shadow: 10px 10px 5px #888888;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #fff;
+}
+.item-head{
+  .name{
+    float:left;
+  }
+  .timestamp{
+    float:right;
+  }
+}
+.p-image{
+  clear: both;
+  width: 200px;
+  height: 150px;
+  // border: 1px solid red;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.form-wrapper{
+  margin: 10px;
+  padding: 20px;
+}
+
+.item-wrapper{
+  padding: 20px;
+  height: 100vh;
+  background-image: url('/assets/items.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.item-button{
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #000;
+}
+
+.detail-wrapper{
+  width: 100%;
+  text-align: center;
+}
+.show-image{
+  margin: 0px auto;
+  width: 400px;
+  height: 350px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.info{
+  margin: 10px 15px;
+  padding: 25px;
+  text-align: center;
+}
+
+.left{
+  width: 200px;
+  margin: auto;
+  text-align: left;
+}
+
+a:link {
+  color: black;
+}
+
+
+body .bootstrap-filestyle{
+  display: inline-block;
+  margin: 10px;
+  // margin-left: 108px;
+  // margin-bottom: 50px;
+  // margin-top: 50px;
+}

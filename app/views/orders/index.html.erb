@@ -1,0 +1,21 @@
+<div class="container">
+  <h1>Orders</h1>
+  <% @orders.each do |order| %>
+    <div class="orders row">
+      <h3><%=order.item.name%></h3>
+      <div class="o-image" style='background-image: url("<%=order.item.image%>)'></div>
+
+      <div class="order-info">
+        <p><%= order.status %> for <%= order.item.name%></p>
+        <p>Order was made <%=time_ago_in_words order.created_at%> ago</p>
+        <strong><p>$<%=order.item.price%>0</p></strong>
+        <p><%=order.item.description%></p>
+
+      </div>
+      <div class="order-links">
+        <%= link_to 'Destroy Order', order, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </div>
+    </div>
+  <% end %>
+  <%= "No orders" if @orders.empty? %>
+</div>

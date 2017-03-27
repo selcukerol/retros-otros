@@ -1,0 +1,46 @@
+<div class="overlay">
+  <div class="login-form">
+    <h2>Sign up</h2>
+
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= devise_error_messages! %>
+      <div class="field">
+        <%= f.label :fname, value = "First Name" %><br />
+        <%= f.text_field :fname, autofocus: true, :class => "formup" %>
+      </div>
+      <div class="field">
+        <%= f.label :lname, value = "Last Name" %><br />
+        <%= f.text_field :lname, :class => "formup"%>
+      </div>
+      <div class="field">
+        <%= f.label :username, value = "Username" %><br />
+        <%= f.text_field :username, :class => "formup"%>
+      </div>
+
+      <div class="field">
+        <%= f.label :email %><br />
+        <%= f.email_field :email, :class => "formup"%>
+      </div>
+
+      <div class="field">
+        <%= f.label :password %>
+        <% if @minimum_password_length %>
+        <em>(<%= @minimum_password_length %> characters minimum)</em>
+        <% end %><br />
+        <%= f.password_field :password, autocomplete: "off" , :class => "formup"%>
+      </div>
+
+      <div class="field">
+        <%= f.label :password_confirmation %><br />
+        <%= f.password_field :password_confirmation, autocomplete: "off" , :class => "formup"%>
+      </div>
+
+      <div class="actions">
+        <%= f.submit "Sign up", class: "btn btn-primary btn-md" %>
+      </div>
+    <% end %>
+
+    <%= render "devise/shared/links" %>
+    <br>
+  </div>
+</div>

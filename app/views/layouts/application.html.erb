@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RetrosOtros</title>
+    <%= csrf_meta_tags %>
+    <link rel="shortcut icon"  href="https://s-media-cache-ak0.pinimg.com/originals/cb/44/96/cb44963c111c4223df5e42660c0bba8f.png" />
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="spacer"></div>
+    <%=render "layouts/navbar"%>
+   <!--  <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p> -->
+    <%= yield %>
+  </body>
+</html>

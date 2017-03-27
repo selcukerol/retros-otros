@@ -1,0 +1,32 @@
+<div class="overlay-order-confirmation">
+	<div class="layout-order-confirmation">
+	<P><strong class="header">ORDER CONFIRMATION</strong></P>
+
+		<p>
+			<strong class="header">Buyer Username:</strong>
+			<%= current_user.username %>
+		</p>
+
+		<p>
+			<strong class="header">Seller Username:</strong>
+			<%= @order.item.user.username %>
+		</p>
+
+		<p>
+			<strong class="header">Item:</strong>
+			<%= @order.item.name %>
+		</p>
+
+		<p>
+			<strong class="header">Price (USD):</strong>
+			<%= @order.item.price %>
+		</p>
+
+		<p>
+			<strong class="header">Status:</strong>
+			<%= @order.status %>
+		</p>
+
+		<%= link_to 'View other items', items_path %>
+	</div>
+</div>

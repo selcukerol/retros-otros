@@ -1,0 +1,85 @@
+<section class="module parallax parallax-1">
+  <div class="container">
+    <img src="/assets/logo.png" id = "logo"></img>
+  </div>
+</section>
+
+<section class="module content">
+  <div class="home-box center-block">
+    <div class="prompt row">
+      <h3>Choose Your Role:</h3>
+    </div>
+    <a href="/items">
+      <div class="role" id= "buyer">
+        BUYER
+      </div>
+    </a>
+    <a href="/items/new">
+      <div class="role" id= "seller">
+        SELLER
+      </div>
+    </a>
+  </div>
+</section>
+
+<section class="module parallax parallax-2">
+  <div class="container">
+    <h1>Community</h1>
+  </div>
+</section>
+
+<section class="module content">
+  <div class="container">
+    <h2>WHO ARE WE ?</h2>
+    <p>We thought you might like to know a bit more of what we're all about. Retros-Otros launched in New York City back in 1875 as a local classified ads and community platform, designed to connect people who were either planning to sell, or buy second hand items.
+    </p>
+    <p>
+      We've grown a lot since then through word of mouth and we're proud to say that Retros-Otros is now loved by its ever growing community. We are the second hand store that now spans 5 boroughs across New York City. Our aim at Retros-Otros is to give you a simple and easy-to-use tool that lets you quickly find the second hand items you are looking for.
+    </p>
+  </div>
+</section>
+
+<section class="module parallax parallax-3">
+  <div class="container">
+    <h1>Preserve</h1>
+  </div>
+</section>
+
+<section class="module content">
+  <div class="container">
+    <h2>OUR MISSION:</h2>
+    <p>
+      Second-hand stuff leaves you more open to whatever your own personal style is rather than feeling dictated to by shops.
+    </p>
+    <p>
+      <strong>Sophie Ellis-Bextor</strong>
+    </p>
+    <p>
+      The mission of Retros Otros is to promote consumption of second hand goods to conserve Earths' natural resources which all life depends on.
+
+      Our vision is a world where the diversity of life thrives, and people act to conserve nature for its own sake and its ability to fulfill our needs and enrich our lives.</p>
+
+      <p>How do we achieve this mission and vision?</p>
+      <ul>
+        <li> Through the dedicated efforts of our diverse staff, including more than 600 scientists, all of whom impact conservation in 69 countries.</li>
+        <li>With the help of our many partners, from individuals and governments to local nonprofits and corporations.</li>
+        <li>By using a non-confrontational, collaborative approach and staying true to our five unique core values.</li>
+      </ul>
+
+
+      <p>That’s how Retro Otros has done more than anyone else to advance conservation around the world since our founding in 1875.</p>
+  </div>
+</section>
+
+<%if current_user%>
+
+  <%else%>
+  <section class="module content" id="register">
+    <div class="home-box center-block">
+      <div class="prompt row">
+        <h3 class="login">Please Register/Sign-in to proceed</h3>
+      </div>
+    </div>
+  </section>
+  <%end%>
+</section>

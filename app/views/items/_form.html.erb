@@ -1,0 +1,49 @@
+<%= form_for(item) do |f| %>
+  <% if item.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(item.errors.count, "error") %> prohibited this item from being saved:</h2>
+
+      <ul>
+      <% item.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<div class="form-wrapper">
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :price %><br>
+    <%= f.text_field :price %>
+  </div>
+
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </div>
+
+  <div class="field">
+    <%= f.label :location %><br>
+    <%= f.text_field :location %>
+  </div>
+
+  <div class="field">
+    <%= f.label :image %><br>
+    <%= f.file_field :image, class: 'filestyle', id: 'file', 
+       :'data-classButton' => 'btn btn-primary',
+       :'data-input' => 'false', classIcon:  'icon-plus',
+       :'data-buttonText' => 'Upload Image' %>
+  </div>
+
+
+
+  <div class="actions">
+    <%= f.submit "Create Item", class: "btn btn-primary btn-mdn" %>
+  </div>
+</div>
+<% end %>

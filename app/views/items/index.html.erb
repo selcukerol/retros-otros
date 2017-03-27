@@ -1,0 +1,40 @@
+<div class='item-wrapper row'>
+  <h1>Items</h1>
+  <% @items.reverse.each do |item| %>
+    <div class="item">
+      <!--#This is the top of the post  -->
+      <div class="item-head">
+        <div class="name">
+          <%=item.user.username%>
+        </div>
+        <div class="timestamp">
+          <%=time_ago_in_words item.created_at%> ago.
+        </div>
+
+      </div>
+      <% if current_user.purchases.map{|o| o.item.id }.include? item.id %>
+        <%= link_to new_order_path(item: item.id) do %>
+        <div class="p-image item_<%=item.id%> center-block" style='background-image: url("<%=item.image%>)'></div>
+        <% end %>
+        <p><%=item.name%></p>
+        <p>Offer Made!</p>
+      <%else%>
+        <%= link_to new_order_path(item: item.id) do %>
+        <div class="p-image item_<%=item.id%>, center-block" style='background-image: url("<%=item.image%>")'></div>
+        <% end %>
+        <p><%=item.name%></p>
+        <p>$<%=item.price%>0</p>
+      <%end%>
+
+      <%if item.user_id == current_user.id%>
+        <%= link_to 'Show', item, class: "item-button" %>
+        |
+        <%= link_to 'Edit', edit_item_path(item), class: "item-button" %>
+        |
+        <%= link_to 'Destroy', item, class: "item-button", method: :delete, data: { confirm: 'Are you sure?' } %>
+      <%else%>
+        <%= link_to 'Show', item, class: "item-button" %>
+      <%end%>
+    </div>
+  <% end %>
+</div>

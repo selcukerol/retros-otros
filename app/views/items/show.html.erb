@@ -1,0 +1,29 @@
+
+  <div class="detail-wrapper">
+    <div class="detail-show">
+      <h3><%=@item.name%></h3>
+      <div class="show-image item_<%=@item.id%>" style='background-image: url("<%=@item.image%>")'></div>
+
+      <div class="info">
+        <div class="left">
+
+          <p>
+            <strong>Price:</strong>
+            <%= @item.price %>
+          </p>
+
+          <p>
+            <strong>Description:</strong>
+            <%= @item.description %>
+          </p>
+
+          <p>
+            <strong>Location:</strong>
+            <%= @item.location %>
+          </p>
+        </div>
+      </div>
+    </div>
+    <%= link_to 'Edit', edit_item_path(@item), class: "btn btn-primary btn-md" %> |
+    <%= link_to 'Back', items_path, class: "btn btn-primary btn-md" %>
+  </div>

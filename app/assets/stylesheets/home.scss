@@ -1,0 +1,136 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.home-box, .about-box{
+  width: 100%;
+  height: 50vh;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.login{
+  color: #fff;
+  margin-top: 180px;
+}
+
+#logo {
+  width: 1000px;
+  height: auto;
+  margin-left: -50px;
+}
+
+.role {
+  margin: 0px 10px;
+  display: inline-block;
+  border-radius: 10px;
+  width: 200px;
+  height: 200px;
+  line-height: 200px;
+  border: 1px solid black;
+  text-align: center;
+  vertical-align: middle;
+  font-weight: bold;
+  font-size: 1.5em;
+  color: #000;
+  font-family: Helvetica, serif;
+  position: relative;
+}
+
+#buyer{
+  background-image: url('/assets/Buyer.jpg');
+}
+#seller{
+  background-image: url('/assets/seller.jpg');
+}
+
+#seller, #buyer{
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.role:hover{
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+section.module:last-child{
+  margin-bottom: 0;
+}
+
+section.module h2{
+  margin-bottom: 40px;
+  font-family: Helvetica, serif;
+  font-size: 30px;
+}
+
+section.module p, li{
+  margin-bottom: 40px;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+section.module p:last-child{
+  margin-bottom: 0;
+}
+
+section.module.content{
+  padding:40px 0;
+}
+
+section#register{
+  background-color: #000;
+}
+
+section.module.parallax{
+  height: 900px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+section.module.parallax h1{
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 40px;
+  line-height: 900px;
+  font-weight: 650;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+section.module.parallax-1{
+  background-image: url("/assets/stock3.png");
+  top: 0;
+  left: 0;
+}
+section.module.parallax-2{
+  background-image: url("/assets/stock1.png");
+}
+section.module.parallax-3{
+  background-image: url("/assets/stock4.png");
+}
+
+@media all and (min-width: 600px){
+  section.module h2 {
+    font-size: 42px;
+  }
+  section.module p {
+    font-size: 20px;
+  }
+  section.module.parallax h1 {
+    font-size: 36px;
+  }
+}
+
+@media all and (min-width: 960px) {
+  section.module.parallax h1 {
+    font-size: 140px;
+  }
+}
